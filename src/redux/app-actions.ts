@@ -1,0 +1,1 @@
+export const initializedSuccess = () => ({ type: 'INITIALIZED_SUCCESS' });
