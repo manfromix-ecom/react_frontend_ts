@@ -1,11 +1,3 @@
-.Forgot-password {
-  width: 106px;
-  height: 15.4px;
-  font-size: 13px;
-  text-align: right;
-  color: #aaaaaa;
-}
-
 .actions {
   display: grid;
   grid-template-columns: 50% 50%;
