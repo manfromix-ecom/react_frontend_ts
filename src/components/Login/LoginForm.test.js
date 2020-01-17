@@ -7,6 +7,7 @@ import {Provider} from "react-redux";
 import {BrowserRouter} from "react-router-dom";
 import style from './LoginForm.module.css';
 import ReactTestUtils from 'react-dom/test-utils';
+import { act } from 'react-dom/test-utils';
 
 describe('LoginForm component', () => {
     test('Password type should be password', () => {
@@ -29,8 +30,14 @@ describe('LoginForm component', () => {
         const root = component.root;
         const pswField = root.findByProps({name:'password'});
         const pswViewer = root.findByProps({className: style.show});
-        ReactTestUtils.Simulate.click(pswViewer);
-        expect(pswField.props.type).toBe('text');
+
+        let promise = new Promise(function(resolve, reject) {
+            ReactTestUtils.Simulate.click(pswViewer);
+        })
+        promise.then(() => {
+                expect(pswField.props.type).toBe('text');
+            }
+            );
     });
 
 });
