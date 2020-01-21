@@ -19,17 +19,17 @@ const FormControl = ({ input, meta: { touched, error }, children }: FormProps) =
             {hasError && <span>{error}</span>}
         </div>
     )
-}
+};
 
 export const Textarea = (props: any) => {
     const {input, meta, child, ...restProps} = props;
     return <FormControl {...props}><textarea {...input} {...restProps} /></FormControl>
-}
+};
 
 export const Input = (props: any) => {
     const {input, meta, child, ...restProps} = props;
     return <FormControl {...props}><input {...input} {...restProps} /></FormControl>
-}
+};
 
 export const createField = (placeholder: string, name: string, validators: any, component: any, props = {}, text = "") => (
     <div>
@@ -39,4 +39,4 @@ export const createField = (placeholder: string, name: string, validators: any, 
                {...props}
         /> {text}
     </div>
-)
+);

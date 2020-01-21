@@ -5,7 +5,7 @@ import {required} from '../../../utils/validators/validators';
 import controlStyle from '../../common/FormsControls/FormsControls.module.css';
 import style from './ResetForm.module.css';
 
-const ResetForm = ({handleSubmit, error}: any) => {
+export const ResetForm = ({handleSubmit, error}: any) => {
 	return (
 		<form onSubmit={handleSubmit}>
 			{createField('Email', 'email', [required], Input,
@@ -18,6 +18,4 @@ const ResetForm = ({handleSubmit, error}: any) => {
 			</div>
 		</form>
 	)
-}
-
-export default ResetForm;
+};

@@ -14,20 +14,17 @@ const initialState = {
 	isAuth: false
 };
 
-const authReducer = (state = initialState, action: ActionTypes) => {
+export const authReducer = (state = initialState, action: ActionTypes) => {
 	switch (action.type) {
 		case 'SET_USER_DATA':
 			return {
 				...state,
 				...action.payload
-			}
+			};
 		default:
 			return state;
 	}
-}
-
-
-
+};
 
 export const getAuthUserData = () => async (dispatch: any) => {
 	let response = await authAPI.me();
@@ -36,7 +33,7 @@ export const getAuthUserData = () => async (dispatch: any) => {
 		let {id, login, email} = response.data.data;
 		dispatch(actions.setAuthUserData(id, email, login, true));
 	}
-}
+};
 
 export const login = (email: string, password: string, rememberMe: boolean) => async (dispatch: any) => {
 	let response = await authAPI.login(email, password, rememberMe);
@@ -48,9 +45,7 @@ export const login = (email: string, password: string, rememberMe: boolean) => a
 			dispatch(stopSubmit("login", {_error: message}));
 		}
 	}
-}
-
-
+};
 
 
 export const logout = () => async (dispatch: any) => {
@@ -59,6 +54,5 @@ export const logout = () => async (dispatch: any) => {
 	if (response && 'data' in response && response.data.resultCode === 0) {
 		dispatch(actions.setAuthUserData(null, null, null, false));
 	}
-}
+};
 
-export default authReducer;

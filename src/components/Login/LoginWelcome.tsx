@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./LoginWelcome.module.css";
 
-const LoginWelcome: React.FunctionComponent = () => {
+export const LoginWelcome: React.FunctionComponent = () => {
 	return (
 		<>
 			<h1 className={style['header']}>Welcome</h1>
@@ -9,5 +9,3 @@ const LoginWelcome: React.FunctionComponent = () => {
 		</>
 	)
 };
-
-export default LoginWelcome;

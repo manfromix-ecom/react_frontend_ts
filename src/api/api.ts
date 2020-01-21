@@ -13,6 +13,6 @@ export const authAPI = {
         console.log('logout');
         return fakeUserData;
     }
-}
+};
 
 

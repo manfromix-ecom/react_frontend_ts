@@ -1,8 +1,8 @@
 import React from 'react';
-import Post from '../common/Posts/Post';
+import {Post} from '../common/Posts/Post';
 import style from "./LoginFooter.module.css";
 
-const LoginFooter = () => {
+export const LoginFooter = () => {
 	return (
 		<div className={style['footer']}>
 			<Post title="LATEST BLOG POST" date="October 15, 2018"
@@ -11,6 +11,4 @@ const LoginFooter = () => {
 				text="#HenryStewartEvents are bringing their #CreativeOps show to NYC for the third…" />
 		</div>
 	)
-}
-
-export default LoginFooter;
+};

@@ -7,7 +7,7 @@ interface PostProps {
 	text: string;
 }
 
-const Post = (props: PostProps) => {
+export const Post = (props: PostProps) => {
 	const {title,date,text} = props;
 	return (
 		<div>
@@ -18,6 +18,4 @@ const Post = (props: PostProps) => {
 			</div>
 		</div>
 	)
-}
-
-export default Post;
+};

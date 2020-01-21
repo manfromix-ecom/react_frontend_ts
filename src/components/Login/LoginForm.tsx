@@ -5,7 +5,7 @@ import style from './LoginForm.module.css';
 import controlStyle from './../common/FormsControls/FormsControls.module.css';
 import {Link} from 'react-router-dom';
 
-const LoginForm = ({handleSubmit, error}: any) => {
+export const LoginForm = ({handleSubmit, error}: any) => {
 	const [isPasswordShown, setPasswordView] = useState(false);
 
 	const togglePassword = () => {
@@ -34,6 +34,4 @@ const LoginForm = ({handleSubmit, error}: any) => {
 			</div>
 		</form>
 	)
-}
-
-export default LoginForm;
+};

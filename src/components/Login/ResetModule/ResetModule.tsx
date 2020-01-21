@@ -2,9 +2,9 @@ import React from "react";
 import {Route, Link} from "react-router-dom";
 
 import style from "./ResetModule.module.css";
-import ResetFormContainer from '../../../containers/ResetFormContainer';
+import {ResetFormContainer} from '../../../containers/ResetFormContainer';
 
-const ResetModule = () => {
+export const ResetModule = () => {
 	return (
 		<div className={style['wrapper']}>
 			<div className={style['header']}>
@@ -31,7 +31,4 @@ const ResetModule = () => {
 			</div>
 		</div>
 		)
-}
-
-
-export default ResetModule;
+};
