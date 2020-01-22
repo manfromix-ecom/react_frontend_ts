@@ -6,9 +6,9 @@ import {ResetFormContainer} from '../../../containers/ResetFormContainer';
 
 export const ResetModule = () => {
 	return (
-		<div className={style['wrapper']}>
-			<div className={style['header']}>
-				<span className={style['header-text']}>
+		<div className={style.wrapper}>
+			<div className={style.header}>
+				<span className={style.header_text}>
 					<Route path='/reset'>
 						Password Reset
 					</Route>
@@ -16,9 +16,9 @@ export const ResetModule = () => {
 						Email Sent
 					</Route>
 				</span>
-				<Link to="/login" className={style['close-modal']}><span>&times;</span></Link>
+				<Link to="/login" className={style.close_modal}><span>&times;</span></Link>
 			</div>
-			<div className={style['body']}>
+			<div className={style.body}>
 					<Route path='/reset'>
 						<p>Please enter the email address associated
 							with your globaledit account to reset your password.</p>

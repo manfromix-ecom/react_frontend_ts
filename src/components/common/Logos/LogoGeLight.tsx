@@ -4,8 +4,8 @@ import style from './LogoGeLight.module.scss';
 
 export const LogoGeLight = () => {
     return (
-        <div className={style['logo-wrapper']}>
-            <img src={LogoGeLightSrc} alt="GlobalEdit Logo" className={style['logo']} />
+        <div className={style.logo_wrapper}>
+            <img src={LogoGeLightSrc} alt="GlobalEdit Logo" className={style.logo} />
         </div>
     )
 };
