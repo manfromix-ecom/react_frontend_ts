@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {createField, Input} from '../common/FormsControls/FormsControls';
 import {required} from "../../utils/validators/validators";
-import style from './LoginForm.module.css';
-import controlStyle from './../common/FormsControls/FormsControls.module.css';
+import style from './LoginForm.module.scss';
+import controlStyle from '../common/FormsControls/FormsControls.module.scss';
 import {Link} from 'react-router-dom';
 
 export const LoginForm = ({handleSubmit, error}: any) => {

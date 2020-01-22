@@ -1,0 +1,49 @@
+@import '../../../vars';
+
+.wrapper {
+  width: 337px;
+  max-width: 100%;
+  position: fixed;
+  top: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  overflow: hidden;
+
+  .header {
+    background-color: $clr_dark;
+    padding: 14px 21px;
+
+    .header-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: $clr_lightest;
+    }
+
+    .close-modal {
+      width: 20px;
+      background-color: $clr_grey;
+      border-radius: 50%;
+      text-align: center;
+      color: $clr_dark;
+      position: absolute;
+      right: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+
+      span {
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+
+  .body {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+    background-color: $clr_lightest;
+    padding: 13px 19px;
+  }
+}
+

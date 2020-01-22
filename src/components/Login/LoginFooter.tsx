@@ -1,6 +1,6 @@
 import React from 'react';
 import {Post} from '../common/Posts/Post';
-import style from "./LoginFooter.module.css";
+import style from "./LoginFooter.module.scss";
 
 export const LoginFooter = () => {
 	return (

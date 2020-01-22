@@ -1,0 +1,19 @@
+@import "../../../vars";
+
+.wrapper {
+  padding-right: 15px;
+
+  .header {
+    width: 136px;
+    font-size: 13px;
+    font-weight: bold;
+    color: $clr_lightest;
+  }
+
+  .body {
+    width: 170px;
+    font-size: 13px;
+    line-height: 1.38;
+    color: $clr_light;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../vars';
+
+.formControl {
+    padding-bottom: 20px;
+}
+
+.formControl.error input,
+.formControl.error textarea
+{
+    border: solid $clr_error 2px;
+}
+
+.formControl.error span
+{
+    color: $clr_error;
+}
+
+.formSummaryError {
+    border: $clr_error 1px solid;
+    padding: 5px;
+    color: $clr_error;
+}
