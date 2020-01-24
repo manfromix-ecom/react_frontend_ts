@@ -3,23 +3,24 @@ import {createField, Input} from '../common/FormsControls/FormsControls';
 import {required} from "../../utils/validators/validators";
 import style from './LoginForm.module.scss';
 import controlStyle from '../common/FormsControls/FormsControls.module.scss';
-import {Link} from 'react-router-dom';
+import {ResetModule} from "./ResetModule/ResetModule";
 
 export const LoginForm = ({handleSubmit, error}: any) => {
+
 	const [isPasswordShown, setPasswordView] = useState(false);
 
 	const togglePassword = () => {
 		setPasswordView(!isPasswordShown);
-	}
+	};
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} id="login_form">
 			<label htmlFor="username" className="input-label">Username</label>
-			{createField("Username", "username", [required], Input,
+			{createField("", "username", [required], Input,
 				{className: "input-bg", id: "username"})}
 			<label htmlFor="password" className="input-label">Password</label>
 			<div className={style.password_wrapper}>
-				{createField("Password", "password", [required], Input,
+				{createField("", "password", [required], Input,
 					{className: "input-bg", id: "password", type: isPasswordShown ? "text" : "password"})}
 				<span onClick={togglePassword} className={style.show}>{isPasswordShown ? "Hide" : "Show"}</span>
 			</div>
@@ -29,8 +30,8 @@ export const LoginForm = ({handleSubmit, error}: any) => {
 			</div>
 			}
 			<div className={style.actions}>
-				<div><button>Sign In</button></div>
-				<div className='forgot_password_link'><Link to="/reset">Forgot password?</Link></div>
+				<div><button className={style.button}>Sign In</button></div>
+				<div><ResetModule /></div>
 			</div>
 		</form>
 	)

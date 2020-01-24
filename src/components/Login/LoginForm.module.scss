@@ -22,7 +22,7 @@
     display: block;
   }
 
-  button {
+  .button {
     cursor: pointer;
     width: 110px;
     line-height: 2.6;
@@ -37,9 +37,22 @@
   > div:last-child {
     text-align: right;
   }
-  a {
+
+  .button_link {
     font-size: 13px;
     color: $clr_light;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    :hover,
+    :focus {
+      text-decoration: none;
+    }
   }
 }
 

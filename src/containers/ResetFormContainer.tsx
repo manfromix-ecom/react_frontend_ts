@@ -1,21 +1,18 @@
 import React from "react";
 import {reduxForm} from "redux-form";
+import {ResetForm} from '../components/Login/ResetModule/ResetForm';
 import {compose} from "redux";
 import {withRouter} from "react-router-dom";
-import {ResetForm} from '../components/Login/ResetModule/ResetForm';
 
+const ResetReduxForm = reduxForm({form: 'reset_password'})(ResetForm);
 
-const LoginReduxForm = reduxForm({form: 'reset_password'})(ResetForm);
-
-const Reset = (props: any) => {
+export const ResetFormContainer = (props: any) => {
 	const onSubmit = (formData: any) => {
 		console.log('Reset', formData, props);
-		props.history.push('/reset_sent');
+		props.handleEmailSending();
 	};
-
-	return <div>
-		<LoginReduxForm onSubmit={onSubmit}/>
-	</div>
+	return <ResetReduxForm onSubmit={onSubmit} />
 };
 
-export const ResetFormContainer = compose(withRouter)(Reset);
+// export const ResetFormContainer = compose(withRouter)(Reset);
+

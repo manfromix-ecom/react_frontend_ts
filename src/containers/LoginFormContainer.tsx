@@ -9,7 +9,5 @@ export const LoginFormContainer = () => {
 		console.log('Login', formData)
 	};
 
-	return <div>
-		<LoginReduxForm onSubmit={onSubmit}/>
-	</div>
+	return <LoginReduxForm onSubmit={onSubmit}/>
 };

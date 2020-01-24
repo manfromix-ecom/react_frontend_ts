@@ -1,43 +1,5 @@
 @import "../../../vars";
 
-.actions {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  align-items: baseline;
-  @media screen and (max-width: 300px) {
-    display: block;
-  }
-
-  .button {
-    cursor: pointer;
-    width: 110px;
-    line-height: 2.6;
-    border-radius: 3px;
-    background-color: $clr_contrast;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    color: $clr_lightest;
-    display: inline-block;
-    text-align: center;
-  }
-
-  a.button {
-    text-decoration: none;
-    background: #999999;
-  }
-
-  > div:last-child {
-    text-align: right;
-  }
-
-  a {
-    font-size: 13px;
-    color: $clr_grey;
-  }
-}
-
-
 .label {
   color: $clr_grey;
   font-size: 13px;
