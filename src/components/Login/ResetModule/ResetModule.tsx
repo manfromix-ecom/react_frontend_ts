@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import style from '../LoginForm.module.scss';
 import modalStyle from '../../common/Modals/Modal.module.scss';
 import {ResetFormContainer} from "../../../containers/ResetFormContainer";
 import {useModal} from "../../common/Modals/useModal";
@@ -46,7 +45,7 @@ export const ResetModule = () => {
 
     return (
         <>
-            <button type='button' onClick={openModal} className={style.button_link}>
+            <button type='button' onClick={openModal} className={modalStyle.button_link}>
                     Forgot password?</button>
             <Modal
                 isShowing={isModalShown}
