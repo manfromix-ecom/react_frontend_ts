@@ -8,8 +8,9 @@ const LoginReduxForm = reduxForm({form: 'login'})(LoginForm);
 
 const Login = (props: any) => {
 	const onSubmit = (formData: any) => {
+		const {login} = props;
 		console.log('Login', formData);
-		props.login(formData.email, formData.password);
+		login(formData.email, formData.password);
 	};
 
 	return <LoginReduxForm onSubmit={onSubmit}/>

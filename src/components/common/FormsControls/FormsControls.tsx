@@ -12,7 +12,7 @@ interface FormProps {
 }
 
 const FormControl: React.FunctionComponent<FormProps> =
-  ({ input, meta: { touched, error }, children }: FormProps) => {
+  ({ meta: { touched, error }, children }: FormProps) => {
     const hasError = touched && error;
     return (
         <div className={styles.formControl + " " + (hasError ? styles.error : "")}>

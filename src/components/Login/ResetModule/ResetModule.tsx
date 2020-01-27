@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import modalStyle from '../../common/Modals/Modal.module.scss';
 import {ResetFormContainer} from "../../../containers/ResetFormContainer";
-import {useModal} from "../../common/Modals/useModal";
-import {Modal} from "../../common/Modals/Modal";
+import { Modal, useModal } from "../../common/Modals/Modal";
 import classNames from "classnames";
 
 export const ResetModule: React.FunctionComponent = () => {
@@ -16,13 +15,14 @@ export const ResetModule: React.FunctionComponent = () => {
     const openModal = () => {
         toggleModal(true);
         setModalView(false);
-    }
+    };
     const closeModal = () => toggleModal(false);
 
     let title: string;
     let text: string;
     let footer: JSX.Element | null;
     let form: JSX.Element | null;
+
     if (isEmailSent) {
         title = 'Email Sent';
         text = 'Thank you, instructions to reset your password have been e-mailed to the address you provided!';

@@ -12,7 +12,6 @@ export const Login = () => {
         <>
             <LoginWelcome />
             <hr />
-
             <LogoGeLight />
             <LoginFormContainer />
             <div className={style.actions}>
@@ -20,7 +19,6 @@ export const Login = () => {
                 <div><ResetModule /></div>
             </div>
             <hr />
-
             <LoginFooter />
         </>
         )
