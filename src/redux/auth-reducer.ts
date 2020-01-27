@@ -21,6 +21,11 @@ export const authReducer = (state = initialState, action: ActionTypes) => {
 				...state,
 				...action.payload
 			};
+		case 'RESET_USER_PASSWORD':
+			return {
+				...state,
+				...action.payload
+			};
 		default:
 			return state;
 	}
@@ -35,8 +40,8 @@ export const getAuthUserData = () => async (dispatch: any) => {
 	}
 };
 
-export const login = (email: string, password: string, rememberMe: boolean) => async (dispatch: any) => {
-	let response = await authAPI.login(email, password, rememberMe);
+export const login = (email: string, password: string) => async (dispatch: any) => {
+	let response = await authAPI.login(email, password);
 	if (response && 'data' in response) {
 		if (response.data.resultCode === 0) {
 			dispatch(getAuthUserData())
@@ -47,12 +52,18 @@ export const login = (email: string, password: string, rememberMe: boolean) => a
 	}
 };
 
-
 export const logout = () => async (dispatch: any) => {
 	let response = await authAPI.logout();
 
 	if (response && 'data' in response && response.data.resultCode === 0) {
 		dispatch(actions.setAuthUserData(null, null, null, false));
+	}
+};
+
+export const resetPassword = (email: string) => async (dispatch: any) => {
+	let response = await authAPI.resetPassword(email);
+	if (response && 'data' in response && response.data.resultCode === 0) {
+		dispatch(actions.resetUserPassword(null, null, null, false));
 	}
 };
 

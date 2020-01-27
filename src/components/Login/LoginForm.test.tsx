@@ -1,10 +1,7 @@
 import React from 'react';
-import style from '../Login/LoginForm.module.scss';
+import style from './LoginForm.module.scss';
 import {shallow} from 'enzyme';
-import {LoginForm} from "../Login/LoginForm";
-import resetModuleStyle from "../common/Modals/Modal.module.scss";
-import {Login} from "../Login/Login";
-import {LoginWelcome} from "../Login/LoginWelcome";
+import {LoginForm} from "./LoginForm";
 
 describe('LoginForm component', () => {
     test('username field presents in LoginForm', () => {

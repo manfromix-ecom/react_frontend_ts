@@ -1,18 +1,25 @@
+import axios from "axios";
 
-const fakeUserData = { data: { resultCode: 999, messages: [], data: {id: null, login: null, email: null} } };
+const apiClient = axios.create({
+  baseURL: "https://yoursite.com/api",
+  responseType: "json",
+  headers: {
+    "Content-Type": "application/json"
+  }
+});
 
 export const authAPI = {
-    me() {
-        return fakeUserData;
-    },
-    login(email: string, password: string, rememberMe = false, captcha = null) {
-        console.log('login', { email, password, rememberMe, captcha });
-        return fakeUserData;
-    },
-    logout() {
-        console.log('logout');
-        return fakeUserData;
-    }
-};
-
+  me() {
+    return apiClient.get(`auth/me`);
+  },
+  login(email: string, password: string) {
+    return apiClient.post(`auth/login`, { email, password});
+  },
+  logout() {
+    return apiClient.delete(`auth/login`);
+  },
+  resetPassword(email: string) {
+    return apiClient.post(`auth/reset`, { email});
+  }
+}
 

@@ -3,9 +3,8 @@ import {createField, Input} from '../common/FormsControls/FormsControls';
 import {required} from "../../utils/validators/validators";
 import style from './LoginForm.module.scss';
 import controlStyle from '../common/FormsControls/FormsControls.module.scss';
-import {ResetModule} from "./ResetModule/ResetModule";
 
-export const LoginForm = ({handleSubmit, error}: any) => {
+export const LoginForm: React.FunctionComponent = ({handleSubmit, error}: any) => {
 
 	const [isPasswordShown, setPasswordView] = useState(false);
 
@@ -29,10 +28,7 @@ export const LoginForm = ({handleSubmit, error}: any) => {
 				{error}
 			</div>
 			}
-			<div className={style.actions}>
-				<div><button className={style.button}>Sign In</button></div>
-				<div><ResetModule /></div>
-			</div>
 		</form>
+
 	)
 };

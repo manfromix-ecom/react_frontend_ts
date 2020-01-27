@@ -7,15 +7,9 @@ $bg_image_3x: url(./img/bgimage-brand-default-1-copy@3x.png);
 html, body, #root {
   height: 100%;
   min-height: -webkit-fill-available;
-  min-height: fill-available;
+  min-height: stretch;
 }
 
-html {
-  overflow: hidden;
-}
-#root {
-  overflow: auto;
-}
 
 body {
   font-family: 'Helvetica Neue', sans-serif;

@@ -2,7 +2,7 @@ import React from 'react';
 import {Post} from '../common/Posts/Post';
 import style from "./LoginFooter.module.scss";
 
-export const LoginFooter = () => {
+export const LoginFooter: React.FunctionComponent = () => {
 	return (
 		<div className={style.footer}>
 			<Post title="LATEST BLOG POST" date="October 15, 2018"

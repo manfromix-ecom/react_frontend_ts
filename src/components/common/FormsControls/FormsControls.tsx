@@ -11,7 +11,8 @@ interface FormProps {
     children: JSX.Element;
 }
 
-const FormControl = ({ input, meta: { touched, error }, children }: FormProps) => {
+const FormControl: React.FunctionComponent<FormProps> =
+  ({ input, meta: { touched, error }, children }: FormProps) => {
     const hasError = touched && error;
     return (
         <div className={styles.formControl + " " + (hasError ? styles.error : "")}>
@@ -21,17 +22,12 @@ const FormControl = ({ input, meta: { touched, error }, children }: FormProps) =
     )
 };
 
-export const Textarea = (props: any) => {
-    const {input, meta, child, ...restProps} = props;
-    return <FormControl {...props}><textarea {...input} {...restProps} /></FormControl>
-};
-
 export const Input = (props: any) => {
     const {input, meta, child, ...restProps} = props;
     return <FormControl {...props}><input {...input} {...restProps} /></FormControl>
 };
 
-export const createField = (placeholder: string, name: string, validators: any, component: any, props = {}, text = "") => (
+export const createField = (placeholder: string, name: string, validators: any[], component: React.FunctionComponent, props = {}, text = "") => (
     <div>
         <Field placeholder={placeholder} name={name}
                validate={validators}

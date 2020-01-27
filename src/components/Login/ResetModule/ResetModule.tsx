@@ -5,7 +5,7 @@ import {useModal} from "../../common/Modals/useModal";
 import {Modal} from "../../common/Modals/Modal";
 import classNames from "classnames";
 
-export const ResetModule = () => {
+export const ResetModule: React.FunctionComponent = () => {
     const [isEmailSent, setModalView] = useState(false);
 
     const setEmailSentView = () => {

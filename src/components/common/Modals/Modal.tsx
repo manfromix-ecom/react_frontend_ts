@@ -11,7 +11,7 @@ interface ModalProps {
     children: JSX.Element | null;
 }
 
-export const Modal = (props: ModalProps) => {
+export const Modal: React.FunctionComponent<ModalProps> = (props: ModalProps) => {
     let {isShowing,title,text,footer,closeModal,children} = props;
 
     return isShowing ? ReactDOM.createPortal(

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import WebFont from 'webfontloader';
 import {Login} from "./Login/Login";
@@ -10,13 +10,7 @@ WebFont.load({
 	}
 });
 
-type MyProps = any;
-type MyState = {
-	showModal: boolean,
-	modalName: string
-};
-
-export class App extends React.Component<MyProps, MyState> {
+export class App extends React.Component {
 	render() {
 		return (
 			<div className='app-wrapper' id='app-wrapper'>

@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow} from "enzyme";
-import {Login} from "../Login/Login";
-import {LoginWelcome} from "../Login/LoginWelcome";
+import {Login} from "./Login";
+import {LoginWelcome} from "./LoginWelcome";
 import {LogoGeLight} from "../common/Logos/LogoGeLight";
 import {LoginFormContainer} from "../../containers/LoginFormContainer";
-import {LoginFooter} from "../Login/LoginFooter";
-import {ResetModule} from "../Login/ResetModule/ResetModule";
+import {LoginFooter} from "./LoginFooter";
+import {ResetModule} from "./ResetModule/ResetModule";
 
 describe('Login component', () => {
     test('LoginWelcome presents in Login component', () => {
